@@ -1,0 +1,12 @@
+myapp:
+  db:
+    oracle:
+      hostname: db.ningzeta.com
+      username: user
+      password: pass
+      sid:  ora12c
+      port: 1521
+    mariadb:
+      hostname: db.ningzeta.com
+      username: user
+      password: pass

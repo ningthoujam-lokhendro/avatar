@@ -10,6 +10,7 @@
     <description>Parse Configuration files and convert to another object.</description>
 
     <url>http://ningzeta.com</url>
+    <inceptionYear>2016</inceptionYear>
 
     <properties>
         <jdk.version>1.7</jdk.version>
@@ -36,9 +37,11 @@
 
     <developers>
         <developer>
-            <id>lokhendro</id>
             <name>Ningthoujam Lokhendro</name>
             <email>lokhendro@gmail.com</email>
+            <roles>
+                <role>Lead Developer</role>
+            </roles>
         </developer>
     </developers>
 
@@ -47,6 +50,11 @@
         <developerConnection>scm:git:ssh://github.com:ningthoujam-lokhendro/avatar.git</developerConnection>
         <url>http://github.com/ningthoujam-lokhendro/avatar/tree/master</url>
     </scm>
+
+    <issueManagement>
+        <system>GitHub Issue Tracker</system>
+        <url>https://github.com/ningthoujam-lokhendro/avatar/issues</url>
+    </issueManagement>
 
     <dependencies>
         <dependency>
@@ -121,6 +129,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+              <groupId>org.sonatype.plugins</groupId>
+              <artifactId>nexus-staging-maven-plugin</artifactId>
+              <version>1.6.7</version>
+              <extensions>true</extensions>
+              <configuration>
+                 <serverId>ossrh</serverId>
+                 <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                 <autoReleaseAfterClose>true</autoReleaseAfterClose>
+              </configuration>
             </plugin>
         </plugins>
     </build>
